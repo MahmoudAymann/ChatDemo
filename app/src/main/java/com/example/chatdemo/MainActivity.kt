@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             startChat("2010")
         }
 
-        addUsers()
+        //addUsers()
     }
 
     /*
