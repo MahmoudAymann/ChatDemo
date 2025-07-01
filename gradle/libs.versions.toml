@@ -20,6 +20,7 @@ socketIoClient = "2.1.1"
 swiperefreshlayout = "1.1.0"
 gson = "2.9.0"
 media3 = "1.4.1"
+glide = "4.16.0"
 
 
 [libraries]
@@ -46,6 +47,7 @@ androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplaye
 androidx-media3-exoplayer-dash = { group = "androidx.media3", name = "media3-exoplayer-dash", version.ref = "media3" }
 androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3" }
 socket-io-client = { module = "io.socket:socket.io-client", version.ref = "socketIoClient" }
+github-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 
 [plugins]

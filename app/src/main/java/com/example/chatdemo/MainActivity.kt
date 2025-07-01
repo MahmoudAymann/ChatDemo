@@ -2,8 +2,6 @@ package com.example.chatdemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import com.chat.chatsdk.ChatSdkManager
 import com.chat.chatsdk.utils.EncryptSharedPreferenceManager
 import com.example.chatdemo.databinding.ActivityMainBinding
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener { view ->
-            startChat("2010")
+            showMyChats()
         }
 
         addUsers()
