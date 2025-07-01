@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             showMyChats()
         }
 
-        addUsers()
+        //addUsers()
     }
 
     /*
