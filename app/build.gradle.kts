@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.socket.io.client)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    //noinspection KaptUsageInsteadOfKsp
     kapt(libs.androidx.room.compiler)
     implementation(libs.retrofit)
     implementation(libs.androidx.swiperefreshlayout)

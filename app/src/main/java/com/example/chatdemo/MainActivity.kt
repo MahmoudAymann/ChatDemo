@@ -32,10 +32,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener { view ->
-            addUsers()
+            showMyChats()
         }
-
-        //addUsers()
     }
 
     /*
@@ -69,8 +67,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
         }
     }
-    
-    private fun startPChat(uId:String, pId: String, pName:String, pImage: String) {
+
+    private fun startPChat(uId: String, pId: String, pName: String, pImage: String) {
         ChatSdkManager.startProductChat(
             context = this,
             receiverIdReq = uId,
@@ -85,10 +83,25 @@ class MainActivity : AppCompatActivity() {
     
 
     private fun showMyChats() {
-        ChatSdkManager.showChatList(
-            context = this,
-            userId = "2010", //logged in userID
-            userName = "My name"
+        ChatSdkManager.initChatSdk(
+            appId = "c09493260b8153ac",
+            appKey = "bfc6f3084a8c0bd7e194fb89ecdede39",
+            language = "ENGLISH",
+            userId = "6293b288-473a-4500-a946-de7591853afe",
+            userName = "Youssef",
+            email = "youssefbadway@gmail.com",
+            phoneNumber = "+201000000000",
+            onSuccess = {
+                Toast.makeText(this, "Success init", Toast.LENGTH_SHORT).show()
+                ChatSdkManager.showChatList(
+                    context = this,
+                    userId = "120",
+                    userName = "My name"
+                )
+            },
+            onFailure = {
+                Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT).show()
+            }
         )
     }
 }
